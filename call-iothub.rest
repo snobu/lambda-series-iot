@@ -1,0 +1,9 @@
+## Send a cloud-to-device message first to your device
+## az iot device c2d-message send -d yolo \
+##    -n poorlyfundedskynet \
+##    --data 'Hello from Azure IoT Hub'
+
+## As device, receive the cloud-to-device message
+## Use this with curl or "REST Client" extension in VSCode
+GET https://poorlyfundedskynet.azure-devices.net/devices/yolo/messages/devicebound?api-version=2016-02-03 HTTP/1.1
+Authorization: SharedAccessSignature sr=poorlyfundedskynet.azure-devices.net%2Fdevices%2Fyolo&sig=VBqkQ7Y%2Fd8IKTlOdcovUnR0RcKLUU9vHBTSn8sAA7cQ%3D&se=1601988570
