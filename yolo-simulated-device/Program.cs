@@ -65,7 +65,10 @@ namespace yolo
             // message.Properties.Add("PayloadEncoding", "messagepack");
 
             // Need Encrypted Payload?
-            //
+            // ========= WARNING ==========
+            // NOT FOR PRODUCTION USE
+            // USE AS PROOF OF CONCEPT ONLY
+            // ============================
             // string encryptedPayload = EncryptString(
             //      "TSLA price tomorrow based on board room sentiment (insider trading?): $49400",
             //      "Sup3Sup3rS3cre7keYSup3rS3cre7keY");
@@ -80,6 +83,10 @@ namespace yolo
             Console.ResetColor();
         }
 
+        // ========= WARNING ==========
+        // NOT FOR PRODUCTION USE
+        // USE AS PROOF OF CONCEPT ONLY
+        // ============================
         public static string EncryptString(string text, string keyString)
         {
             var key = Encoding.UTF8.GetBytes(keyString);
